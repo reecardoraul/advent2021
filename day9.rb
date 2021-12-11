@@ -57,7 +57,7 @@ def part2(input)
     row.chars.each_with_index.map{|val, x| Point.new(x,y,val.to_i)}
   }
   basins=[] #reducer
-  topography.each_with_index.map do |row,y|
+  topography.each_with_index do |row,y|
     row.each_with_index do |cxy,x|
       basin = explore_basin(topography, x, y)
       basins.push(basin) unless basin.nil?
