@@ -1,6 +1,7 @@
 file = File.open("day2.txt")
 file_data = file.readlines.map(&:chomp)
 
+#looking back this is way overkill, but often advent will continue iterating on a solution and I thought that was the case here, so I went with a crude parser/lexer
 class Sub
   attr_accessor :depth, :hpos
 
